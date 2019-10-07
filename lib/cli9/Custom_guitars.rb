@@ -1,4 +1,4 @@
-lass Custom_Guitars
+class Custom_Guitars
 attr_reader :name, :rating, :summary
 @@all = []
 
@@ -8,6 +8,10 @@ def initialize(name, rating, summary)
 @summary = summary
 save
 end
+
+def self.all
+     @@all
+    end
 
 def save
 @@all << self

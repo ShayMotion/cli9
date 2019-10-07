@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require_relative './cli9/lib/cli9.rb'
+
+Cli9::CLI.new.call
