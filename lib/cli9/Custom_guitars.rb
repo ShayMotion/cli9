@@ -1,20 +1,22 @@
 class Custom_Guitars
-attr_reader :name, :rating, :summary
-@@all = []
+  attr_reader :name, :rating, :summary
+  @@all = []
 
-def initialize(name, rating, summary)
-@name = name
-@rating = rating
-@summary = summary
-save
-end
+  def initialize(name, rating, summary)
+    @name = name
+    @rating = rating
+    @summary = summary
+  save
+  end
 
-def self.all
+  def self.all
      @@all
     end
 
-def save
-@@all << self
-end
+  def save
+    @@all << self
+    end
 
 end
+
+#Hello
