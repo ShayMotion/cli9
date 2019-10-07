@@ -1,3 +1,3 @@
-module Cli9
+module GuitarGallery
   VERSION="0.1.0"
 end

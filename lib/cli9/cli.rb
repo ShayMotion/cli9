@@ -7,30 +7,30 @@ class GuitarGallery::CLI
   end
   
   def get_guitars
-  #to be scraped instead
-  @guitars = ['Ernie Ball', 'Ibanez', 'Gibson', ]
-
-  def list_guitars
-  # list
-  @guitars.each.with_index do {|index, guitar|
-  puts "#{index + 1}. #{guitar}"  
-  }
+    #to be scraped instead
+     @guitars = ['Ernie Ball', 'Ibanez', 'Gibson', ]
   end
-end
+  
+  def list_guitars
+      # list
+     @guitars.each.with_index {|index, guitar|
+        puts "#{index + 1}. #{guitar}"  
+      }
+  end
 
   def get_user_guitar
-  chosen_guitar = gets.strip
-  if valid_input(chosen_guitar.to_i, @guitars) 
-    show_guitars_for(chosen_guitar)
+    chosen_guitar = gets.strip
+    if valid_input(chosen_guitar.to_i, @guitars) 
+      show_guitars_for(chosen_guitar)
+    end
   end
-end
 
   def valid_input(input, data)
-  input.to_i <= data.length && input.to_i < 0  
-end
+    input.to_i <= data.length && input.to_i < 0  
+  end
 
   def show_guitars_for(chosen_guitar)
-  guitar = @guitars[chosen_guitar - 1]
-  puts "Excellent Choice! Rock on!"
+    guitar = @guitars[chosen_guitar - 1]
+    puts "Excellent Choice! Rock on!"
   end
 end

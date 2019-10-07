@@ -1,4 +1,4 @@
-class Cli9::Scraper
+class GuitarGallery::Scraper
 
   def self.scrape_guitars
   site = "https://www.guitarfella.com/best-electric-guitar/"
