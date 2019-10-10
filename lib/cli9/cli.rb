@@ -1,18 +1,18 @@
 class GuitarGallery::CLI
   def call
     puts "\nWelcome To The Guitar Gallery\n"
-    #display_guitar_menu
-    #get_user_guitar_choice
-    #display_guitar_summary
+  get_guitars
+  list_guitars
+  get_user_guitar
   end
   
   def get_guitars
     #to be scraped instead
-     @guitars = ['Ernie Ball', 'Ibanez', 'Gibson', ]
+     @guitars = GuitarGallery::Custom_Guitars.all
   end
   
   def list_guitars
-      # list
+     puts "Select A Guitar By Entering a Number From 1-10."
      @guitars.each.with_index {|index, guitar|
         puts "#{index + 1}. #{guitar}"  
       }
@@ -32,5 +32,8 @@ class GuitarGallery::CLI
   def show_guitars_for(chosen_guitar)
     guitar = @guitars[chosen_guitar - 1]
     puts "Excellent Choice! Rock on!"
+    guitars.Custom_Guitars.each.with_index(1) do |guitar, idx|
+      puts "#{idx}. #{guitar.name}"
+    end
   end
 end
