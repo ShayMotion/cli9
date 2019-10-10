@@ -12,12 +12,12 @@ class GuitarGallery::CLI
   end
   
   def list_guitars
-     puts "Select A Guitar By Entering a Number From 1-10."
-     GuitarGallery::Custom_Guitars.all.each.with_index(1) do |guitar, index|
-        puts "#{index + 1}. #{guitar.name}" 
+     @guitars.all.each.with_index(1) do |guitar, index|
+        puts "#{index}. #{guitar.name}" 
   end
 
   def get_user_guitar
+    puts "Select A Guitar By Entering a Number From 1-10."
     chosen_guitar = gets.strip
     if valid_input(chosen_guitar.to_i, @guitars) 
       show_guitars_for(chosen_guitar)
