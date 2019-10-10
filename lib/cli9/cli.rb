@@ -13,9 +13,8 @@ class GuitarGallery::CLI
   
   def list_guitars
      puts "Select A Guitar By Entering a Number From 1-10."
-     @guitars.each.with_index {|index, guitar|
-        puts "#{index + 1}. #{guitar}"  
-      }
+     GuitarGallery::Custom_Guitars.all.each.with_index(1) do |guitar, index|
+        puts "#{index + 1}. #{guitar.name}" 
   end
 
   def get_user_guitar
@@ -34,6 +33,6 @@ class GuitarGallery::CLI
     puts "Excellent Choice! Rock on!"
     guitars.Custom_Guitars.each.with_index(1) do |guitar, idx|
       puts "#{idx}. #{guitar.name}"
+      end
     end
-  end
-end
+
