@@ -33,6 +33,8 @@ class GuitarGallery::CLI
     puts "Excellent Choice! Rock on!"
     guitars.Custom_Guitars.each.with_index(1) do |guitar, idx|
       puts "#{idx}. #{guitar.name}"
+      puts #{guitar.rating}
+      puts #{guitar.summary}
       end
     end
 
