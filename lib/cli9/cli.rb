@@ -36,3 +36,21 @@ class GuitarGallery::CLI
       end
     end
 
+  def learn_more(guitar)
+    puts "Check Out Another Guitar(Y/N)?"
+    input = "nil"
+    until input == "Y" || input == "N"
+     puts "type Y(yes) or N(no) "
+     input = gets.strip.upcase
+    end
+    if input == "y"
+    else
+    puts "Select Again"
+    list_guitars
+  end
+  if input == "n"
+    else
+    puts "Rock on! Goodbye."
+    list_guitars
+  end
+end
