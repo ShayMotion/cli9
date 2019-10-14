@@ -38,9 +38,9 @@ class GuitarGallery::CLI
     puts ""
     puts "Excellent Choice! Rock on!"
     puts ""
-      puts guitar.name
-      puts guitar.rating
-      puts guitar.summary
+      puts "Guitar: #{guitar.name}"
+      puts "Rating: #{guitar.rating}"
+      puts "Review: #{guitar.summary}"
       learn_more
   end
 
