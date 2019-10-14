@@ -12,7 +12,7 @@ class GuitarGallery::Scraper
   name = r.css('.table_product_name a').text.strip
   rating = r.css('td:nth-child(2) p').text.strip
   summary = r.css('td:nth-child(3) p').text.strip
-  guitar = Custom_Guitars.new(name, rating, summary)
+  guitar = GuitarGallery.new(name, rating, summary)
   puts guitar.name
   puts guitar.rating
   puts summary

@@ -1,4 +1,4 @@
-class Custom_Guitars::Guitar
+class GuitarGallery::Guitar
   attr_reader :name, :rating, :summary
   @@all = []
 
@@ -11,11 +11,10 @@ class Custom_Guitars::Guitar
   end
 
   def self.all
-    Custom_Guitars::Scraper.scrape_guitars if @@all.empty?
+    GuitarGallery::Scraper.scrape_guitars if @@all.empty?
      @@all
     end
     
-def get_guitars  
   
   def save
     @@all << self

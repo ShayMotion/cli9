@@ -8,12 +8,13 @@ class GuitarGallery::CLI
   
   def get_guitars
     #to be scraped instead
-     @guitars = GuitarGallery::Custom_Guitars.all
+     @guitars = GuitarGallery::Guitar.all
   end
   
   def list_guitars
      @guitars.all.each.with_index(1) do |guitar, index|
         puts "#{index}. #{guitar.name}" 
+     end
   end
 
   def get_user_guitar
@@ -35,8 +36,8 @@ class GuitarGallery::CLI
       puts "#{idx}. #{guitar.name}"
       puts #{guitar.rating}
       puts #{guitar.summary}
-      end
     end
+  end
 
   def learn_more(guitar)
     puts "Check Out Another Guitar(Y/N)?"
@@ -46,13 +47,10 @@ class GuitarGallery::CLI
      input = gets.strip.upcase
     end
     if input == "y"
-    else
-    puts "Select Again"
-    list_guitars
-  end
-  if input == "n"
-    else
-    puts "Rock on! Goodbye."
-    list_guitars
+     puts "Select Again"
+     list_guitars
+    elsif input == "n"
+     puts "Rock on! Goodbye."
+    end
   end
 end
